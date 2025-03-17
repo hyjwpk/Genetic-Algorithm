@@ -22,7 +22,7 @@ def create_gif(image_folder, output_gif, duration=500):
         images.append(imageio.imread(file_path))
     print(f"共找到 {len(images)} 张图片")
     if images:
-        imageio.mimsave(output_gif, images, duration=duration / 1000)
+        imageio.mimsave(output_gif, images, duration=duration / 1000, loop = 0)
         print(f"GIF 已成功保存至 {output_gif}")
     else:
         print("未找到有效图片文件，请检查文件夹路径")
